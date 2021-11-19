@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metod map</title>
+</head>
+<body>
+    <script>
+        
+        let arr = ['juan', 'marcos', 'lena', 'sergio']
+        let resul =[] 
+        // declarando un arreglo vacio
+        for(let i = 0; i < arr.length; i++){
+            const item = arr[i]
+            resul.push(`<div>${item}</div>`)
+            
+
+        }
+        /*
+            el metodo map, funciona similar forEach pero este metodo map()
+            si nos va a devolver un arreglo
+
+            map hace una operacion en cada iteracion de nuestro arreglo y esa operacion
+            la va almacenar como una nuevo elemento, entonces nos va a devolver un arreglo
+            nuevo sin modificar el original
+        */
+       console.log(resul)
+
+       /*
+        cuando un metodo u otra funcion me pide una callback esta puede ser una funcion anonima
+        de tipo flecha o con la palabra reservada function 
+        o declarar antes una funcion, para despues llamarla
+       */
+
+       let resul2 = arr.map((item, index)=>{
+           return `<div>${item}</div>`
+       })
+
+       console.log(`\ncon el metodo map()`)
+       console.log(resul2)
+       console.log(arr)
+
+        
+    </script>
+</body>
+</html>

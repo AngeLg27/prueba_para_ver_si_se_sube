@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo find</title>
+</head>
+<body>
+    <script>
+        let arr = [
+            {
+                city: 'California',
+                budget: 5500
+            },
+            {
+                city: 'NY',
+                budget: 8000
+            },
+            {
+                city: 'Orlando',
+                budget: 2000
+            }
+        ]
+
+        let resul = {}
+        // si para declarar un arreglo vacío es let arreglo = []
+        // entonces para declarar un objeto vacio es ={}
+        for(let index = 0; index < arr.length; index){
+            const item = arr[index]
+            if(item.budget < 8000){
+                resul = item
+                break
+            }
+
+        }
+
+        /*
+            lo que nos permite el metodo find es encontrar la 1ra conincidencia 
+            basado en una condicion
+        */
+       console.log(resul)
+
+       console.log(`\nmetodo filter`)
+       let resul2 = arr.find( item => item.budget < 8000)
+       console.log(resul2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreach</title>
+</head>
+<body>
+    <script>
+        let arreglo = [2, 4, 6, 8, 10, 12]
+        console.log('por un ciclo for')
+
+        for(let i = 0; i < arreglo.length; i++){
+            const item = arreglo[i]
+            const index = i
+
+            console.log(item, index)
+        }
+
+        console.log("\npor el metodo Foreach")
+        arreglo.forEach((item, index)=>{
+            console.log(`${index} - ${item}`)
+        })
+
+        /*
+            osea forEach, metodo para recorrer un arreglo para ver tanto su indice como
+            el elemento que guarda
+        */
+    </script>
+</body>
+</html>
